@@ -35,5 +35,10 @@ browser.$("input#profession-0").click()
 browser.$("input#profession-1").click()
 
 
+// Dropdown select
+browser.$("form").continents = "Europe"
+browser.$("#continents").value("Australia")
+
+
 // exit window
 //browser.quit()
