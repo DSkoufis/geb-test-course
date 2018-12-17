@@ -25,5 +25,9 @@ browser.$("input[name = 'firstname']")value "First name"
 browser.$("#datepicker") << "20/12/2019"
 
 
+// Select radio button
+browser.$("#sex-0").click()
+
+
 // exit window
 //browser.quit()
