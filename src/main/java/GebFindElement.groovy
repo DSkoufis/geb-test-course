@@ -2,7 +2,7 @@ import geb.Browser
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.firefox.FirefoxDriver
 
-def isChrome = true
+def isChrome = false
 def browserSetup = isChrome ? "chrome" : "gecko"
 def path = "/home/dimitrios/Documents/automation/${browserSetup}driver"
 def prop = "webdriver.${browserSetup}.driver"
@@ -11,7 +11,8 @@ System.setProperty(prop, path)
 
 String site = "http://elearntesting.com/for-students/demo-site-for-automation-practice/"
 
-def browser = new Browser(driver: new ChromeDriver())
+def driver = isChrome ? new ChromeDriver() : new FirefoxDriver()
+def browser = new Browser(driver: driver)
 
 browser.go site
 
@@ -40,5 +41,10 @@ browser.$("form").continents = "Europe"
 browser.$("#continents").value("Australia")
 
 
+// File upload
+String filePath = "/home/dimitrios/work/private/geb-test-course/pom.xml"
+browser.$("#photo").value(filePath)
+
+
 // exit window
-//browser.quit()
+browser.quit()
