@@ -34,6 +34,6 @@ environments {
 	firefox { driver = { new FirefoxDriver() } }
 }
 
-baseUrl = "http://elearntesting.com"
+baseUrl = "http://abodeqa.com"
 reportsDir = "./target/report"
 
