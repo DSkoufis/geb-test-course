@@ -5,8 +5,7 @@ import org.openqa.selenium.firefox.FirefoxDriver
 def isChrome = true
 def browserSetup = isChrome ? "chrome" : "gecko"
 def path = "/home/dimitrios/Documents/automation/${browserSetup}driver"
-def prop = "webdriver.${browser}.driver"
-
+def prop = "webdriver.${browserSetup}.driver"
 System.setProperty(prop, path)
 
 
@@ -16,4 +15,5 @@ def browser = new Browser(driver: new ChromeDriver())
 
 browser.go site
 
-println browser.$("input[name = 'firstname']").displayed
+//browser.$("button[name = 'submit'").click()
+browser.$("#submit").click()
