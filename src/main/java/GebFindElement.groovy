@@ -27,6 +27,12 @@ browser.$("#datepicker") << "20/12/2019"
 
 // Select radio button
 browser.$("#sex-0").click()
+browser.$("#exp-4").click()
+
+
+// Click checkbox
+browser.$("input#profession-0").click()
+browser.$("input#profession-1").click()
 
 
 // exit window
