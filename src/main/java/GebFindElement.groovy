@@ -47,4 +47,4 @@ browser.$("#photo").value(filePath)
 
 
 // exit window
-browser.quit()
+//browser.quit()
