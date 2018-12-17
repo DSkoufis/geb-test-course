@@ -8,6 +8,11 @@ class SimpleSpockSpec extends Specification {
 		println "I ran #not"
 	}
 
+	def "Feature methods need at least one block"() {
+		setup:
+			println "I ran #YO"
+	}
+
 	def "Adding two numbers returns the sum"() {
 		given:
 			def sum = new Adder("test")
