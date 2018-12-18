@@ -17,4 +17,8 @@ class PostPage extends Page {
 	String getPageUrl() {
 		"posts/${post.id}/${post.title.toLowerCase().replaceAll(" ", "-")}"
 	}
+
+	static content = {
+		loginPageLink { $("selector") }
+	}
 }
