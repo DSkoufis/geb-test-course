@@ -31,4 +31,8 @@ class ContactUsPage extends Page {
 
 		assert nameField.value() == nameString
 	}
+
+	def addNameToEmailField(email) {
+		emailField.value(email)
+	}
 }
