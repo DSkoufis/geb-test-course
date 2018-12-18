@@ -8,13 +8,23 @@ class GebWithSpockExampleSpec extends GebSpec {
 		given:
 			to ContactUsPage
 		and:
-			"Add name to name field"("test")
-			addNameToEmailField("test@test.com")
-			"Enter comment"("Test")
+			"Add name to name field" "test"
+			addNameToEmailField "test@test.com"
+			"Enter comment" "Test"
 
 		when:
 			"Click submit"()
 		then:
 			at MessageSubmittedPage
+	}
+
+	def "Go to discount page"() {
+		given:
+			to ContactUsPage
+
+		when:
+			goToDiscountPage()
+		then:
+			title == "Discount Coupons - Abode QA"
 	}
 }

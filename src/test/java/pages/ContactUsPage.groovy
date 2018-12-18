@@ -1,6 +1,7 @@
 package pages
 
 import geb.Page
+import modules.TabsModule
 
 class ContactUsPage extends Page {
 
@@ -18,6 +19,7 @@ class ContactUsPage extends Page {
 		emailField { $("input.email") }
 		commentField(wait: true) { $("#contact-form-comment-g1280-comment") }
 		submitButton(wait: true) { $("input.pushbutton-wide") }
+		tabsSection(wait: true) { module TabsModule }
 
 		/*
 		Options Map:
@@ -45,5 +47,9 @@ class ContactUsPage extends Page {
 
 	def "Click submit"() {
 		submitButton.click()
+	}
+
+	def goToDiscountPage() {
+		tabsSection.clickOnDiscountCoupons()
 	}
 }
