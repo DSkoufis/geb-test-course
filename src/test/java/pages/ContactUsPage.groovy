@@ -16,6 +16,8 @@ class ContactUsPage extends Page {
 		// <navigator name><options map><actual selector>
 		nameField(wait: true) { $("input.name") }
 		emailField { $("input.email") }
+		commentField(wait: true) { $("#contact-form-comment-g1280-comment") }
+		submitButton(wait: true) { $("input.pushbutton-wide") }
 
 		/*
 		Options Map:
@@ -34,5 +36,14 @@ class ContactUsPage extends Page {
 
 	def addNameToEmailField(email) {
 		emailField.value(email)
+		assert emailField.value() == email // verify that the email has been set
+	}
+
+	def "Enter comment"(comment) {
+		commentField.value(comment)
+	}
+
+	def "Click submit"() {
+		submitButton.click()
 	}
 }
