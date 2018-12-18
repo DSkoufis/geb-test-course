@@ -20,7 +20,7 @@ class OnLoadOverrideExample extends Page {
 		super.onLoad(previousPage)
 
 		if (autoCloseCookieBar && cookieBar) {
-			cookieBar.close()
+			cookieBar.close() // method that closes the window --> Should be inside the module
 		}
 	}
 }
