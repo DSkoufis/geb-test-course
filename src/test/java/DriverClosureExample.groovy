@@ -1,12 +1,5 @@
 import geb.Browser
 
-def isChrome = true
-def browserSetup = isChrome ? "chrome" : "gecko"
-def path = "/home/dimitrios/Documents/automation/${browserSetup}driver"
-def prop = "webdriver.${browserSetup}.driver"
-System.setProperty(prop, path)
-
-
 String site = "wp-content/uploads/2016/05/DemoSite.html" // appends this to the baseUrl in GebConfig
 
 Browser.drive {
