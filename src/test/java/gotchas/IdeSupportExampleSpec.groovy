@@ -4,6 +4,9 @@ import geb.spock.GebSpec
 
 class IdeSupportExampleSpec extends GebSpec {
 
+	/**
+	 * Ref: https://youtu.be/yKFHmLYCfn0?t=1994
+	 */
 	def "Setting the return value helps the IDE and developers"() {
 		given:
 			def postPage = to PostPage
