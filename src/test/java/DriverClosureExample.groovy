@@ -7,7 +7,7 @@ def prop = "webdriver.${browserSetup}.driver"
 System.setProperty(prop, path)
 
 
-String site = "/wp-content/uploads/2016/05/DemoSite.html" // appends this to the baseUrl in GebConfig
+String site = "wp-content/uploads/2016/05/DemoSite.html" // appends this to the baseUrl in GebConfig
 
 Browser.drive {
 	go site

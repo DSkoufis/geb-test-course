@@ -34,6 +34,6 @@ environments {
 	firefox { driver = { new FirefoxDriver() } }
 }
 
-baseUrl = "http://abodeqa.com"
+baseUrl = "http://abodeqa.com/" // It's better to set the trailing slash here to not have slashes on the start of each url in the tests. Ref: http://www.gebish.org/manual/current/#base-url
 reportsDir = "./target/report"
 
